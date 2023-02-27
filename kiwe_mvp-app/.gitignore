@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build artifacts
+build/
+dist/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs and other generated files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+coverage/
+*.log
+*.log.*
+*.pid
+*.seed
+*.pid.lock
+
+# Editor files
+.vscode/
+.idea/
+
+# Other project-specific files
+*.iml
+*.orig
+.idea/
+.project
+.settings/
+*.tmp
+*.bak
+*.swp
+.DS_Store
