@@ -37,9 +37,9 @@ const LanguageSwitchPage=()=>{
             <label for="terms-check">이용약관/ Terms and Conditions Agreement</label>                     
           </div>
         </div>
-        <div class="btn-next" type="submit"> 
+        <button class="btn-next" type="submit"> 
           NEXT 
-        </div>
+        </button>
       </form>
       
     </>
