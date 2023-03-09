@@ -1,0 +1,17 @@
+.topic-btn{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  width:30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color:transparent;
+  cursor: pointer;
+}
+
+.topic-btn img{
+  width:80%;
+  height:80%;
+  border-radius:50%;
+}

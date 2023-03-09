@@ -1,6 +1,6 @@
 import React, {useState}  from 'react';
 
-const LanguageSwitchPage=()=>{
+const SelectLanguagePage=()=>{
   const [termCheck,setTermCheck]= useState(false);
   const [privacyCheck,setPrivacyCheck]= useState(false);
 
@@ -24,20 +24,20 @@ const LanguageSwitchPage=()=>{
       <h2>KiWES</h2>
       
 
-      <form method="post" action="" class="form">
-        <div class="languageSwitch-form">
+      <form method="post" action="" className="form">
+        <div className="languageSwitch-form">
           <button>한국어</button>
           <button>English</button>
         </div>
-        <div class="agreement_form">
-          <div class="agreement_terms">
+        <div className="agreement_form">
+          <div className="agreement_terms">
             <input type="checkbox" id="terms-check" checked={termCheck} onChange={termBtnEvent}/>
-            <label for="terms-check">이용약관/ Terms and Conditions Agreement</label>
+            <label htmlFor="terms-check">이용약관/ Terms and Conditions Agreement</label>
             <input type="checkbox" id="terms-privacy" checked={privacyCheck} onChange={privacyBtnEvent}/>
-            <label for="terms-check">이용약관/ Terms and Conditions Agreement</label>                     
+            <label htmlFor="terms-check">이용약관/ Terms and Conditions Agreement</label>                     
           </div>
         </div>
-        <button class="btn-next" type="submit"> 
+        <button className="btn-next" type="submit"> 
           NEXT 
         </button>
       </form>
@@ -45,4 +45,4 @@ const LanguageSwitchPage=()=>{
     </>
   )
 }
-export default LanguageSwitchPage;
+export default SelectLanguagePage;

@@ -17,30 +17,29 @@ const ProfileSettingPage=()=>{
 
   return(
     <div>
+      <div className="text-top">
+          <h2 className="logo">KiWES</h2>
+          <h2 className="start">프로필 설정</h2>
+      </div>
       <form onSubmit={handleSubmit}>
-        <div class="text-top">
-          <h2 class="logo">KiWES</h2>
-          <h2 class="start">프로필 설정</h2>
-        </div>
-
-        <div class="profile-setting">
-          <div class="input label">프로필 이미지</div>
+        <div className="profile-setting">
+          <div className="input label">프로필 이미지</div>
           <input id="setProfileImg" type="file" onChange={(event)=>setProfileImg(event.target.files[0].name)}/>
         </div>
 
-        <div class="name-setting">
-          <div class="input label">닉네임</div>
+        <div className="name-setting">
+          <div className="input label">닉네임</div>
           <input id="setName" type="text" value={name} onChange={(event)=>setName(event.target.value)} required/>
         </div>
 
-        <div class="gender-setting">
-          <div class="input label">성별 *</div>
+        <div className="gender-setting">
+          <div className="input label">성별 *</div>
           <label><input type="radio" value="남" checked={gender==="male"} onChange={(event)=>setGender(event.target.value)}></input></label>
           <label><input type="radio" value="여" checked={gender==="female"} onChange={(event)=>setGender(event.target.gender)}></input></label>
         </div>
         
-        <div class="birth-setting">
-          <div class="input label">생년월일 *</div>
+        <div className="birth-setting">
+          <div className="input label">생년월일 *</div>
           <DatePicker selected={birthdate} onChange={(date)=>setBirthdate(date)}
           dateFormat="yyyy/MM/dd"
           showYearDropdown
@@ -50,14 +49,14 @@ const ProfileSettingPage=()=>{
           required/>
         </div>
 
-        <div class="email-auth">
-          <div class="input email">소속 대학 메일 인증 (선택)</div>
+        <div className="email-auth">
+          <div className="input email">소속 대학 메일 인증 (선택)</div>
           <input id="setEmail" type="email" value={email} onChange={(event)=>setEmail(event.target.value)}/>
         </div>
-        <button class="btn-next" type="submit">설정 완료</button>
+        <button className="btn-next" type="submit">설정 완료</button>
 
-        <div class="bio-setting">
-          <div class="input bio">자기소개 (선택)</div>
+        <div className="bio-setting">
+          <div className="input bio">자기소개 (선택)</div>
           <textarea id="setBio" type="text" value={bio} rows="5" cols="33" onChange={(event)=>setBio(event.target.value)} placeholder="자기소개를 입력해주세요.(150자 제한)"></textarea>
         </div>
       </form>
@@ -66,3 +65,4 @@ const ProfileSettingPage=()=>{
 
   )
 }
+export default ProfileSettingPage;
