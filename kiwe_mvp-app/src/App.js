@@ -10,20 +10,21 @@ import Container from '@mui/material/Container';
 
 
 
+
 function App() {
   return (
     <BrowserRouter>
       <Container fixed>
-        <div className="App">
-          <div id="page-body">
-            <Routes>
-              <Route path="/start/selectlanguage" element={<SelectLanguagePage/>}/>
-              <Route path="/start/login" element={<LoginPage/>}/>
-              <Route path="/start/profilesetting" element={<ProfileSettingPage/>}/>
-              <Route path="/start/selecttopic" element={<SelectTopic/>}/>
-            </Routes>
+          <div className="App">
+            <div id="page-body">
+              <Routes>
+                <Route path="/start/selectlanguage" element={<SelectLanguagePage/>}/>
+                <Route path="/start/login" element={<LoginPage/>}/>
+                <Route path="/start/profilesetting" element={<ProfileSettingPage/>}/>
+                <Route path="/start/selecttopic" element={<SelectTopic/>}/>
+              </Routes>
+            </div>
           </div>
-        </div>
       </Container>
     </BrowserRouter>
     
