@@ -7,7 +7,6 @@ import LoginPage from './pages/LoginPage';
 import SelectTopic from './pages/SelectTopic';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Container from '@mui/material/Container';
-import Footer from './Footer';
 
 
 
@@ -24,8 +23,6 @@ function App() {
               </Routes>
             </div>
       </Container>
-      <Footer/>
-
     </BrowserRouter>
     
     );

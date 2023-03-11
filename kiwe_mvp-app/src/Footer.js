@@ -1,8 +1,10 @@
-const Footer=()=>{
+const Footer=({buttonText, onClick })=>{
   return(
     <footer style={styles.footer}>
       <hr stlye={styles.line}/> 
-      <button className="footer_button" style={styles.button}>NEXT</button>
+      <button className="footer_button" style={styles.button} onClick={onClick}>
+        {buttonText}
+      </button>
     </footer>
   )
 }
