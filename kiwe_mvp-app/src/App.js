@@ -7,7 +7,7 @@ import LoginPage from './pages/LoginPage';
 import SelectTopic from './pages/SelectTopic';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Container from '@mui/material/Container';
-
+import Footer from './Footer';
 
 
 
@@ -15,7 +15,6 @@ function App() {
   return (
     <BrowserRouter>
       <Container fixed>
-          <div className="App">
             <div id="page-body">
               <Routes>
                 <Route path="/start/selectlanguage" element={<SelectLanguagePage/>}/>
@@ -24,8 +23,9 @@ function App() {
                 <Route path="/start/selecttopic" element={<SelectTopic/>}/>
               </Routes>
             </div>
-          </div>
       </Container>
+      <Footer/>
+
     </BrowserRouter>
     
     );

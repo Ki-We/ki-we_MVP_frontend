@@ -1,21 +1,21 @@
 .languageSwitch-form{
   display:flex;
   flex-direction:column;
-  align-content:space-between;
-  margin-top:20%;
-  height: 250px;
+  justify-content:space-between;
+  height:30%;
+  align-items: center;
+  margin-bottom:35%;
 }
 
 .rectangleBox{
   width: 72%;
-  height: 62px;
-  margin-top:3.5%;
-  margin-left:14.5%; 
-  margin-right: 14.5%;
+  height: 43%;
   border-radius: 10px;
   border: solid 2px #3dbe14;
   background-color:white;
   font-size: 24px;
+  text-align:center;
+  vertical-align: middle;
   font-weight: 600;
   color: #868686;
   line-height: 1.5;
@@ -26,12 +26,21 @@
 
 input[type=checkbox]{
   accent-color: #3dbe14;
-  zoom:1.2;
-  margin: 3 3 0 0 ;
+  zoom:1.5;
 }
 
-.container{
-  margin-top: 36%;
-  margin-bottom:12%;
-  margin-right:4%;
+.agreement_form{
+  display:flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  font-size:14px;
+}
+.agreement_set{
+  display:flex;
+  align-items:center;
+  word-spacing:-1px;
+
+}
+.privacy-text{
+  letter-spacing:-1px;
 }
