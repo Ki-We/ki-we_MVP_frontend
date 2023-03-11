@@ -3,6 +3,11 @@ import '../styles/langPage.css';
 const SelectLanguagePage=()=>{
   const [termCheck,setTermCheck]= useState(false);
   const [privacyCheck,setPrivacyCheck]= useState(false);
+  const [selectedLanguage, setSelectedLanguages]= useState(null);
+
+  const handleButtonClick=(language)=>{
+    setSelectedLanguages(language);
+  }
 
   const termBtnEvent=()=>{
     if(termCheck===false){
@@ -18,17 +23,21 @@ const SelectLanguagePage=()=>{
       setPrivacyCheck(false)
     }
   }
+  
   return(
     <>
       <div className="logobox">
           <img src="/assets/kiwes_logo.png" alt="키위새"/>
           <span className="title">KiWES</span>
       </div>
-      
       <form method="post" action="" className="form">
         <div className="languageSwitch-form">
-          <button className="rectangleBox">한국어</button>
-          <button className="rectangleBox">English</button>
+          <button className={`rectangleBox ${selectedLanguage === "ko" ? "active" : ""}`}
+        onClick={() => handleButtonClick("ko")}
+          >한국어</button>
+          <button  className={`rectangleBox ${selectedLanguage === "en" ? "active" : ""}`}
+        onClick={() => handleButtonClick("en")}
+          >English</button>
         </div>
         <div className="agreement_form">
           <div className="agreement_set">
@@ -41,7 +50,6 @@ const SelectLanguagePage=()=>{
           </div>
         </div>
       </form>
-      
     </>
   )
 }

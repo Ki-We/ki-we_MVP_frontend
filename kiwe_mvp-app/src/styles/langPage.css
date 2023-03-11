@@ -23,7 +23,10 @@
   font-style: normal;
   font-family: Inter;
 }
-
+.rectangleBox.active {
+  background-color: #3dbe14;
+  color: white;
+}
 input[type=checkbox]{
   accent-color: #3dbe14;
   zoom:1.5;
