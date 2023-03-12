@@ -1,8 +1,20 @@
-const Footer=({buttonText, onClick })=>{
+const Footer=({buttonText, isFormComplete })=>{
+  const buttonStyle={
+    width:'100%',
+    height:'100%',
+    color: 'black',
+    backgroundColor:'white',
+    border: 'none',
+    cursor: 'pointer',
+    fontSize: '1.7rem',
+    fontWeight:'bold',
+    backgroundColor: isFormComplete? "#3dbe14" :"white",
+  };
+
   return(
     <footer style={styles.footer}>
       <hr stlye={styles.line}/> 
-      <button className="footer_button" style={styles.button} onClick={onClick}>
+      <button className="footer_button" style={buttonStyle} >
         {buttonText}
       </button>
     </footer>
@@ -29,15 +41,5 @@ const styles = {
     margin: '0',
     border: '1px solid #e6e6e6',
   },
-  button: {
-    width:'100%',
-    height:'100%',
-    color: 'black',
-    backgroundColor:'white',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    fontSize: '1.7rem',
-    fontWeight:'bold',
-  },
+  
 };

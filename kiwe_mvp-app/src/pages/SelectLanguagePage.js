@@ -7,12 +7,21 @@ const SelectLanguagePage=()=>{
   const [privacyCheck,setPrivacyCheck]= useState(false);
   const [selectedLanguage, setSelectedLanguages]= useState(null);
   const [isFormComplete, setIsFormComplete]= useState(false);
-
+  const [isSubmitted, setIsSubmitted]=useState(false);
   //언어선택 버튼
   const handleButtonClick=(language)=>{
     setSelectedLanguages(language);
   }
 
+  const handleFooterButtonClick=()=>{
+    if(isFormComplete){
+      setIsSubmitted(true);
+      console.log("able");
+        //navigate to the next page
+    } else{
+      alert('Please complete the form frist.');
+    }
+  }
   const termBtnEvent=()=>{
     if(termCheck===false){
       setTermCheck(true)
@@ -29,20 +38,19 @@ const SelectLanguagePage=()=>{
   }
   //to update whether user clicked everything.
   useEffect(()=>{
-    if(termCheck&&privacyCheck&&selectedLanguage){
-      setIsFormComplete(true);
-    }else{
-      setIsFormComplete(false);
-    }
+    const isLanguageSelected= !!selectedLanguage; //!! operator is used to convert the selectedLanguage value to a boolean value
+    const isTermsChecked=termCheck;
+    const isPrivacyChecked= privacyCheck;
+    setIsFormComplete(isLanguageSelected && isTermsChecked && isPrivacyChecked);
   },[termCheck, privacyCheck, selectedLanguage]);
-
+  console.log('isFormComplete',isFormComplete);
   return(
     <>
       <div className="logobox">
           <img src="/assets/kiwes_logo.png" alt="키위새"/>
           <span className="title">KiWES</span>
       </div>
-      <div fclassName="form">
+      <div className="form">
         <div className="languageSwitch-form">
           <button className={`rectangleBox ${selectedLanguage === "ko" ? "active" : ""}`}
         onClick={() => handleButtonClick("ko")}
@@ -58,12 +66,14 @@ const SelectLanguagePage=()=>{
           </div>
           <div className="agreement_set">
             <input type="checkbox" id="terms-privacy" checked={privacyCheck} onChange={privacyBtnEvent} required/>
-            <label class="privacy-text" htmlFor="terms-privacy">개인정보 처리방침 동의/ Privacy Policy Agreement</label>                     
+            <label className="privacy-text" htmlFor="terms-privacy">개인정보 처리방침 동의/ Privacy Policy Agreement</label>                     
           </div>
         </div>
       </div>
       <Footer 
         buttonText="NEXT"
+        onClick={handleFooterButtonClick}
+        isFormComplete={isFormComplete}
       />
     </>
   )
