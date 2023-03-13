@@ -1,0 +1,45 @@
+.logobox_setting{
+  background-color: aqua;
+  display:flex;
+  flex-wrap: wrap;
+  width:40%;
+  justify-content:start;
+  align-items:center;
+  margin-top:25%;
+}
+.logobox_setting img{
+  width: 22%;
+  height:50%;
+  transform: scaleX(-1);
+}
+.title_setting{
+  letter-spacing:-0.96px;
+  color: #3dbe14;
+  font-weight: bold;
+  font-size:25px;
+  margin-left: 4%;
+}
+.page-title{
+  background-color: red;
+  line-height:1.5;
+  font-size:25px;
+  font-weight:bold;
+  letter-spacing:-0.96px;
+}
+.input-label{
+  font-size:12px;
+  font-weight: bold;
+  text-align: left;
+  font-family: Inter;
+}
+.profile-form-box{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  height:82%;
+  margin-top:11%;
+}
+.img-setting{
+  height:17%;
+  background: purple;
+}
