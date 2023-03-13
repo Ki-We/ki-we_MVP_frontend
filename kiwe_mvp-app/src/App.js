@@ -8,8 +8,6 @@ import SelectTopic from './pages/SelectTopic';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Container from '@mui/material/Container';
 
-
-
 function App() {
   return (
     <BrowserRouter>
@@ -24,7 +22,6 @@ function App() {
             </div>
       </Container>
     </BrowserRouter>
-    
     );
 }
 
