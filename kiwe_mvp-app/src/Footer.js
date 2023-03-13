@@ -2,14 +2,14 @@ const Footer=({buttonText, isFormComplete })=>{
   const buttonStyle={
     width:'100%',
     height:'100%',
-    color: 'black',
+    color: isFormComplete?"white":"black",
     backgroundColor:'white',
     border: 'none',
     cursor: 'pointer',
     fontSize: '1.7rem',
     fontWeight:'bold',
     backgroundColor: isFormComplete? "#3dbe14" :"white",
-  };
+};
 
   return(
     <footer style={styles.footer}>
@@ -30,7 +30,7 @@ const styles = {
     height: '13%',
     borderTop: '1px solid #e6e6e6',
     backgroundColor: '#f9f9f9',
-    position: 'absolute',
+    position: 'fixed',
     bottom: '0',
     width: '100%',
 

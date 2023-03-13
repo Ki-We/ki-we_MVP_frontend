@@ -35,7 +35,8 @@ const ProfileSettingPage=()=>{
     setIsFormComplete(isNameTyped&&isGenderSelected&&isBirthSelected);
   },[name,gender,birthdate]);
   return(
-    <div >
+    <>
+    <div id="page-margin">
     <ProgressIndicator progress={35}/>
       <div className="logobox_setting">
           <img src="/assets/kiwes_logo.png" alt="키위새"/>
@@ -93,7 +94,11 @@ const ProfileSettingPage=()=>{
       </form>
       
     </div>
-
+    <Footer
+    buttonText="설정 완료"
+    isFormComplete={isFormComplete}       
+    />
+    </>
   )
 }
 export default ProfileSettingPage;
