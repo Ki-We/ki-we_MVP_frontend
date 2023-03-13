@@ -55,7 +55,7 @@
 #setName{
   padding: 12px;
   padding-left:7px;
-  padding-right:60px;
+  padding-right:75px;
   flex-grow: 0;
   border: solid 1px #8a8a8a;
   background-color: #fff;
@@ -97,7 +97,7 @@
   color: #757575;
   padding: 12px;
   padding-left:7px;
-  width:42%;
+  width:41%;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
@@ -113,7 +113,7 @@
 }
 .birth-pick{
   padding:12px;
-  padding-right:165px;
+  padding-right:182px;
   padding-left:7px;
   align-items: center;
   border: solid 1px #8a8a8a;
@@ -128,7 +128,7 @@
 }
 #setEmail{
   padding:12px;
-  padding-right:60px;
+  padding-right:76px;
   padding-left:7px;
   flex-grow: 0;
   border: solid 1px #8a8a8a;
@@ -140,6 +140,7 @@
 /*자기소개란*/
 .bio-setting{
   margin-top:1%;
+
 }
 #setBio{
   border: solid 1px #8a8a8a;
@@ -148,8 +149,9 @@
   font-size: 13px;
   font-weight:bold;
   font-family:Iner;
-  width:98%;
+  width:97%;
   padding-top:7px;
   padding-left:7px;
   padding-bottom:30px;
+  margin-bottom:170px;
 }
