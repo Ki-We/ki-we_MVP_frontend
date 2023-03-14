@@ -33,6 +33,7 @@ const ProfileSettingPage=()=>{
       reader.onloadend=()=>{
         setProfileImg(reader.result);
       };
+      reader.readAsDataURL(file); //read the file contents
     }
   };
   const handleSubmit=(event)=>{
@@ -45,6 +46,7 @@ const ProfileSettingPage=()=>{
     setIsFormComplete(isNameTyped&&isGenderSelected&&isBirthSelected);
   },[name,gender,birthdate]);
 
+  
   return(
     <>
     <div id="page-margin">
