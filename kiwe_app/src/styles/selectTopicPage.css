@@ -1,0 +1,24 @@
+.topic-btn{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  width:75px;
+  height: 75px;
+  border-radius: 50%;
+  border: none;
+  background-color:transparent;
+  cursor: pointer;
+}
+
+.topic-btn img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+}
+
+.topicName{
+  text-align:center;
+  letter-spacing : -0.1em;
+  font-weight: 600;
+  font-size:12px;
+}

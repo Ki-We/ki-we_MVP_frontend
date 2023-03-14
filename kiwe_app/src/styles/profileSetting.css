@@ -1,0 +1,157 @@
+.logobox_setting{
+  display:flex;
+  flex-wrap: wrap;
+  width:40%;
+  justify-content:start;
+  align-items:center;
+  margin-top:25%;
+}
+.logobox_setting img{
+  width: 22%;
+  height:50%;
+  transform: scaleX(-1);
+}
+.title_setting{
+  letter-spacing:-0.96px;
+  color: #3dbe14;
+  font-weight: bold;
+  font-size:25px;
+  margin-left: 4%;
+}
+.page-title{
+  line-height:1.5;
+  font-size:25px;
+  font-weight:bold;
+  letter-spacing:-0.96px;
+}
+/*Form 안에 css*/
+.input-label{
+  font-size:12px;
+  font-weight: bold;
+  text-align: left;
+  font-family: Inter;
+  margin-top:4%;
+}
+.profile-form-box{
+  display:flex;
+  flex-direction:column;
+  height:82%;
+  margin-top:11%;
+}
+/*프로필 이미지 섹션*/
+.img-setting{
+  height:17%;
+}
+.profile-img-container{
+  display:flex;
+  justify-content:center;
+}
+/*닉네임 섹션*/
+.name-setting{
+  margin-bottom: 7%;
+  margin-top:1%;
+  display:flex;
+}
+#setName{
+  padding: 12px;
+  padding-left:7px;
+  padding-right:75px;
+  flex-grow: 0;
+  border: solid 1px #8a8a8a;
+  background-color: #fff;
+  display: inline-block;
+  font-size: 13px;
+  font-weight:bold;
+
+}
+
+.check-button{
+  width: 96px;
+  height: 43px;
+  opacity: 0.2;
+  border:0;
+  border-radius: 4px;
+  background-color: #000;
+  color:white;
+  font-weight: bold;
+  margin-left:10px;
+}
+/*성별선택*/
+.gender-setting {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin-top:1%;
+}
+
+.gender-setting input[type="radio"] {
+  display: none;
+}
+
+.gender-setting label {
+  display: inline-block;
+  background-color: white;
+  border: solid 1px #8a8a8a;
+  font-weight: bold;
+  font-size: 13px;
+  color: #757575;
+  padding: 12px;
+  padding-left:7px;
+  width:41%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.gender-setting label:hover {
+  background-color: #000;
+  opacity:0.2;
+  color: white;
+}
+/*생일 입력란*/
+.birth-setting{
+  margin-top:1%;
+}
+.birth-pick{
+  padding:12px;
+  padding-right:182px;
+  padding-left:7px;
+  align-items: center;
+  border: solid 1px #8a8a8a;
+  background-color: #fff;
+  font-size: 13px;
+  font-weight:bold;
+}
+/*소속 대학 메일 인증*/
+.email-auth{
+  margin-top:1%;
+  display:flex;
+}
+#setEmail{
+  padding:12px;
+  padding-right:76px;
+  padding-left:7px;
+  flex-grow: 0;
+  border: solid 1px #8a8a8a;
+  background-color: #fff;
+  font-size: 13px;
+  font-weight:bold;
+}
+
+/*자기소개란*/
+.bio-setting{
+  margin-top:1%;
+
+}
+#setBio{
+  border: solid 1px #8a8a8a;
+  background-color: #fff;
+  display: inline-block;
+  font-size: 13px;
+  font-weight:bold;
+  font-family:Iner;
+  width:97%;
+  padding-top:7px;
+  padding-left:7px;
+  padding-bottom:30px;
+  margin-bottom:170px;
+}
