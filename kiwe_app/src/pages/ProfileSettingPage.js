@@ -75,19 +75,19 @@ const ProfileSettingPage=()=>{
             </Badge>
           </div>
         </div>
-        <div className="input-label">닉네임 *</div>
+        <div className="input-label">닉네임 <span id="emphasis">*</span></div>
         <div className="name-setting">
           <input id="setName" placeholder="닉네임 입력" type="text" value={name} onChange={(event)=>setName(event.target.value)} required/>
           <button className="check-button">중복확인</button>
         </div>
 
-        <div className="input-label">성별 *</div>
+        <div className="input-label">성별 <span id="emphasis">*</span></div>
         <div className="gender-setting">
           <label>남<input type="radio" value="남" checked={gender==="male"} onChange={(event)=>setGender(event.target.value)}></input></label>
           <label>녀<input type="radio" value="여" checked={gender==="female"} onChange={(event)=>setGender(event.target.gender)}></input></label>
         </div>
 
-        <div className="input-label">생년월일 *</div>
+        <div className="input-label">생년월일 <span id="emphasis">*</span></div>
         <div className="birth-setting">
           <DatePicker className="birth-pick" selected={birthdate} onChange={(date)=>setBirthdate(date)}
           dateFormat="yyyy/MM/dd"
@@ -98,13 +98,13 @@ const ProfileSettingPage=()=>{
           required/>
         </div>
 
-        <div className="input-label">소속 대학 메일 인증 (선택)</div>
+        <div className="input-label">소속 대학 메일 인증 <span id="un-emphasis">(선택)</span></div>
         <div className="email-auth">
           <input id="setEmail" type="email" value={email} placeholder="메일 입력"onChange={(event)=>setEmail(event.target.value)}/>
           <button className="check-button">인증하기</button>
         </div>
         
-        <div className="input-label">자기소개 (선택)</div>
+        <div className="input-label">자기소개 <span id="un-emphasis">(선택)</span></div>
         <div className="bio-setting">
           <textarea id="setBio" type="text" value={bio} rows="5" cols="33" onChange={(event)=>setBio(event.target.value)} placeholder="자기소개를 입력해주세요.(150자 제한)"></textarea>
         </div>

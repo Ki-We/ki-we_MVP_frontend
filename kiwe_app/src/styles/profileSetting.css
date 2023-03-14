@@ -155,3 +155,11 @@
   padding-bottom:30px;
   margin-bottom:170px;
 }
+
+#emphasis{
+  color:#3dbe14;
+}
+
+#un-emphasis{
+  color:#8a8a8a;
+}
