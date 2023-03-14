@@ -8,15 +8,18 @@ const ProgressIndicator=(props)=>{
     <div style={{
       display:"flex",
       alignItems: "center",
-      justifyContent:"center"
     }}>
     <img src="/assets/back-arrow.png" 
-      style={{marginLeft:"10px",}}/>
+      style={{marginLeft:"6%",
+      width:"5%",
+      height:"5%",
+      marginRight:"20%"
+}}/>
     <div className="progress-bar"
       style={{
         height:"4px",
         width:"40.4%",
-        margin:"0 auto",
+        marginRight:"30px",
         backgroundColor:"#ddd",
         position:"relative",
         
