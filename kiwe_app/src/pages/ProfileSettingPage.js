@@ -25,6 +25,16 @@ const ProfileSettingPage=()=>{
   const [email, setEmail] =useState('');
   const[bio, setBio]= useState('');
   const[isFormComplete, setIsFormComplete]= useState(false);
+
+  const handleImageUpload=(event)=>{
+    const file= event.target.files[0];
+    if(file){
+      const reader= new FileReader();
+      reader.onloadend=()=>{
+        setProfileImg(reader.result);
+      };
+    }
+  };
   const handleSubmit=(event)=>{
     event.preventDefault();
   }
@@ -34,6 +44,7 @@ const ProfileSettingPage=()=>{
     const isBirthSelected=!!birthdate;
     setIsFormComplete(isNameTyped&&isGenderSelected&&isBirthSelected);
   },[name,gender,birthdate]);
+
   return(
     <>
     <div id="page-margin">
@@ -51,10 +62,14 @@ const ProfileSettingPage=()=>{
               overlap="circular"
               anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
               badgeContent={
-                <SmallAvatar alt="edit-button" src="/assets/edit-button.png" />
+                <label htmlFor="profile-upload-input">
+                <SmallAvatar alt="edit-button" src="/assets/edit-button.png"/>
+                  <input id="profile-upload-input" type="file" onChange={handleImageUpload} hidden/>
+                </label>
               }
             >
               <Avatar alt="profileImg" src={profileImg} sx={{ width: 80, height:80 }}/>
+              
             </Badge>
           </div>
         </div>
