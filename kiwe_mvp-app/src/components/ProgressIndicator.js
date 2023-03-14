@@ -2,7 +2,16 @@ import { useState } from 'react';
 
 const ProgressIndicator=(props)=>{
   const[progress, setProgress]=useState(props.progress||0);
-  return(<header style={{position:"fixed", zIndex:"999", top:0, left:0, right:0 , backgroundColor:"white", paddingTop:"15%"}}>
+
+  return(
+  <header style={{position:"fixed", zIndex:"999", top:0, left:0, right:0 , backgroundColor:"white", paddingTop:"15%"}}>
+    <div style={{
+      display:"flex",
+      alignItems: "center",
+      justifyContent:"center"
+    }}>
+    <img src="/assets/back-arrow.png" onClick={handleBackClick}
+      style={{marginLeft:"10px",}}/>
     <div className="progress-bar"
       style={{
         height:"4px",
@@ -22,6 +31,7 @@ const ProgressIndicator=(props)=>{
         top:"0"
       }}
       />
+    </div>
     </div>
   </header>);
 }

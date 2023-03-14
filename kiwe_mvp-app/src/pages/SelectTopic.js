@@ -1,5 +1,7 @@
 import '../styles/selectTopicPage.css';
 import Grid from '@mui/material/Grid';
+import '../styles/selectTopic.css';
+
 const interests=[
   {name: '문화/전시/공연', imgUrl: ''},
   {name: '한국문화', imgUrl: ''},
