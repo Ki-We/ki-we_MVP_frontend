@@ -71,7 +71,7 @@ const SelectLanguagePage=()=>{
         </div>
       </div>
       <Footer 
-        buttonText="NEXT"
+        buttonText="다음"
         onClick={handleFooterButtonClick}
         isFormComplete={isFormComplete}
       />

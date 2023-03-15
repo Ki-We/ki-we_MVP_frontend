@@ -1,61 +1,89 @@
 import '../styles/selectTopicPage.css';
 import Grid from '@mui/material/Grid';
-import '../styles/selectTopic.css';
+import ProgressIndicator from "../components/ProgressIndicator";
+import Footer from '../Footer';
+import React, { useEffect,useState} from 'react';
 
 const interests=[
-  {name: '문화/전시/공연', imgUrl: ''},
-  {name: '한국문화', imgUrl: ''},
-  {name: '맛집/카페', imgUrl: ''},
-  {name: '스포츠', imgUrl: ''},
-  {name: '놀이공원', imgUrl: ''},
-  {name: '여행', imgUrl: ''},
-  {name: '스터디', imgUrl: ''},
-  {name: '게임/보드게임', imgUrl: ''},
-  {name: '파티/클럽', imgUrl: ''},
-  {name: 'K-pop', imgUrl: ''},
-  {name: '영화/드라마/애니', imgUrl: ''},
-  {name: '음악/악기', imgUrl: ''},
-  {name: '댄스', imgUrl: ''},
-  {name: '봉사활동', imgUrl: ''},
-  {name: '쇼핑', imgUrl: ''},
-  {name: '수공예/그림', imgUrl: ''},
-  {name: '반려동물', imgUrl: ''},
-  {name: '술', imgUrl: ''},
+  {name: '문화/전시/공연', imgUrl: '/assets/movie.jpg'},
+  {name: '한국문화', imgUrl: '/assets/movie.jpg'},
+  {name: '맛집/카페', imgUrl: '/assets/movie.jpg'},
+  {name: '스포츠', imgUrl: '/assets/movie.jpg'},
+  {name: '놀이공원', imgUrl: '/assets/movie.jpg'},
+  {name: '여행', imgUrl: '/assets/movie.jpg'},
+  {name: '스터디', imgUrl: '/assets/movie.jpg'},
+  {name: '게임/보드게임', imgUrl: '/assets/movie.jpg'},
+  {name: '파티/클럽', imgUrl: '/assets/movie.jpg'},
+  {name: 'K-pop', imgUrl: '/assets/movie.jpg'},
+  {name: '영화/드라마/애니', imgUrl: '/assets/movie.jpg'},
+  {name: '음악/악기', imgUrl: '/assets/movie.jpg'},
+  {name: '댄스', imgUrl: '/assets/movie.jpg'},
+  {name: '봉사활동', imgUrl: '/assets/movie.jpg'},
+  {name: '쇼핑', imgUrl: '/assets/movie.jpg'},
+  {name: '수공예/그림', imgUrl: '/assets/movie.jpg'},
+  {name: '반려동물', imgUrl: '/assets/movie.jpg'},
+  {name: '술', imgUrl: '/assets/movie.jpg'},
 ];
 
 const SelectTopic=()=>{
-  const TopicItem=({imgUrl, topicName,onClick })=>{
+  const[selectedTopic,setSelectedTopic]=useState([]); //선택된 관심주제
+  const[isFormComplete, setIsFormComplete]= useState(false);
+  
+  useEffect(() => {
+    console.log(selectedTopic);
+    setIsFormComplete(selectedTopic.length>0); //관심주제 하나이상 들어오면 activate
+  }, [selectedTopic,setIsFormComplete]);
+  
+  const TopicItem=({imgUrl,topicName,onClick,isSelected})=>{
     return(
       <>
-        <button className="topic-btn" onClick={onClick}>
-        <img src={imgUrl} alt="topic-img-btn"/> 
-        </button>
-        <div className="topicName">{topicName}</div>
+        <div className="topic-box-container">
+          <button className={`topic-btn ${isSelected?.name===topicName? 'selected':''}`} onClick={onClick} >
+          <img className= {`topic-img ${isSelected?.name===topicName? 'selected-img':''}`} src={imgUrl} alt="topic-img-btn"  /> 
+          </button>
+          <div className="topicName">{topicName}</div>
+        </div>
       </>
       
     );
   };
 
   const handleBtnClick=(interest)=>{
-    console.log(`you clicked the ${interest.name} button!`);
+    const isAlreadySelected=selectedTopic.find(item=>item.name===interest.name);
+    
+    if(isAlreadySelected){
+      //Remove the object
+      setSelectedTopic(prevSelectedTopic=> prevSelectedTopic.filter(item=>item.name!==interest.name));
+    }else{
+      setSelectedTopic(prevSelectedTopic=>[...prevSelectedTopic, interest]);
+    }
   }
   return(
     <>
-        <div className="top-title">
-          <h3>관심 주제를</h3>
-          <h3>1개 이상 선택해주세요.</h3>
+      <ProgressIndicator progress={70}/>
+        <div className="topic-page-box">
+          <div className="top-title">
+            <h2>관심 주제를</h2>
+            <h2>1개 이상 선택해 주세요.</h2>
+          </div>
+          <div className="topic-grid">
+            <Grid  container spacing={3.3}>
+                  {interests.map((interest)=>(
+                    <Grid item xs={4} key={interest.name}>
+                      <TopicItem 
+                      imgUrl={interest.imgUrl}
+                      topicName={interest.name}
+                      isSelected={selectedTopic.includes(interest)}
+                      onClick={()=>handleBtnClick(interest)}/> 
+                    </Grid>
+                  ))}
+            </Grid>
+          </div>
         </div>
-        <Grid container spacing={3.5}  >
-              {interests.map((interest)=>(
-                <Grid item xs={4}>
-                  <TopicItem 
-                  key={interest.name}
-                  imgUrl={interest.imgUrl}
-                  topicName={interest.name}
-                  onClick={()=>handleBtnClick(interest)}/> 
-                </Grid>
-              ))}
-        </Grid>
+      <Footer
+        buttonText="다음"
+        isFormComplete={isFormComplete}
+      />
     </>
   );
 }

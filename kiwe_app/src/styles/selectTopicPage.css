@@ -1,24 +1,49 @@
+.topic-page-box{
+  margin-top:25%;
+}
+.top-title h2{
+  margin:7px;
+  font-size:25px;
+  font-weight: 800;
+  line-height: 1.5;
+  font-family: Inter;
+  letter-spacing : -0.1em;
+}
+.topic-grid{
+  margin-top:30px;
+}
+.topic-box-container{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  width: 90px;
+  height:110px;
+}
 .topic-btn{
   display:flex;
-  justify-content: center;
-  align-items:center;
-  width:75px;
-  height: 75px;
-  border-radius: 50%;
   border: none;
   background-color:transparent;
   cursor: pointer;
 }
 
+.topic-btn.selected {
+}
 .topic-btn img{
+  flex-shrink:2;
   width:100%;
-  height:100%;
+  height:143%;
   border-radius:50%;
 }
 
+.topic-img.selected-img {
+  border: 2px solid green;
+
+}
 .topicName{
+  flex-shrink:1;
   text-align:center;
-  letter-spacing : -0.1em;
-  font-weight: 600;
-  font-size:12px;
+  letter-spacing : -0.15em;
+  font-weight: 900;
+  font-size:13.5px;
+  margin-top:25%;
 }
