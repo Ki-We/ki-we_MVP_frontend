@@ -32,16 +32,16 @@ const InterestingLangPage=()=>{
       return(
         <div className="lang-box-container">
           <input 
+            className="lang-input"
             type="text"
             placeholder="언어 직접입력"
-            className={(e)=>
-            onClick({lang_display:e.target.value,lang_name:"etc"})}/>
+            />
         </div>
       );
     }
     return(
         <div className="lang-box-container">
-          <button className='lang-btn' onClick={onClick}>
+          <button className='lang-btn' onClick={()=>onClick(lang_display)}>
             {lang_display}
           </button>
         </div>
@@ -66,7 +66,7 @@ const InterestingLangPage=()=>{
             <h2>1개 이상 선택해 주세요.</h2>
           </div>
           <div className="lang-grid">
-            <Grid container spacing={3}>
+            <Grid container spacing={2}>
               {interestLang.map((lang)=>(
                 <Grid item xs={4} key={lang.lang_name}>
                   <LangItem

@@ -3,13 +3,12 @@
   width:90%;
 }
 .top-title h2{
-  margin:7px;
-  font-size:25px;
-  font-weight: 800;
+  margin:5px;
+  font-size:27px;
+  font-weight: 1200;
   line-height: 1.5;
   font-family: Inter;
   letter-spacing : -0.1em;
-  background-color: azure;
 
 }
 .topic-grid{

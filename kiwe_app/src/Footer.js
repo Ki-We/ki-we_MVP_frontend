@@ -6,8 +6,9 @@ const Footer=({buttonText, isFormComplete })=>{
     backgroundColor:'white',
     border: 'none',
     cursor: 'pointer',
-    fontSize: '1.7rem',
-    fontWeight:'bold',
+    fontSize: '1.5rem',
+    letterSpacing:"-2px",
+    fontWeight:'1000',
     backgroundColor: isFormComplete? "#3dbe14" :"white",
 };
 
@@ -33,6 +34,7 @@ const styles = {
     position: 'fixed',
     bottom: '0',
     width: '100%',
+    
 
   },
   line: {
