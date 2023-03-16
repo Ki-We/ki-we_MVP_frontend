@@ -15,7 +15,7 @@ const interestLang=[
   {lang_display:'español', lang_name:'Spanish'},
   {lang_display:'Tiếng Việt', lang_name:'Vietnam'},
   {lang_display:'русский', lang_name:'Russian'},
-  {lang_display:'Others______', lang_name:'etc'},
+  {lang_display:'others', lang_name:'etc'},
 ]
 
 const InterestingLangPage=()=>{
@@ -27,7 +27,18 @@ const InterestingLangPage=()=>{
     setIsFormComplete(interestingLang.length>0);
   },[interestingLang, isFormComplete]);
 
-  const langItem=({lang_display,onClick})=>{
+  const LangItem=({lang_display,onClick})=>{
+    if(lang_display==='others'){
+      return(
+        <div className="lang-box-container">
+          <input 
+            type="text"
+            placeholder="언어 직접입력"
+            className={(e)=>
+            onClick({lang_display:e.target.value,lang_name:"etc"})}/>
+        </div>
+      );
+    }
     return(
         <div className="lang-box-container">
           <button className='lang-btn' onClick={onClick}>
@@ -56,12 +67,12 @@ const InterestingLangPage=()=>{
           </div>
           <div className="lang-grid">
             <Grid container spacing={3}>
-              {interestingLang.map((lang)=>(
+              {interestLang.map((lang)=>(
                 <Grid item xs={4} key={lang.lang_name}>
-                <langItem
-                lang_display={lang.lang_display}
-                onClick={()=>handleBtnClick(lang)}/>
-              </Grid>
+                  <LangItem
+                  lang_display={lang.lang_display}
+                  onClick={()=>handleBtnClick(lang)}/>
+                </Grid>
               ))}
             </Grid>
           </div>

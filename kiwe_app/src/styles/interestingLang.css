@@ -4,14 +4,14 @@
   width:90%;
 }
 .lang-grid{
-  background-color: red;
+  margin-top:10%;
 }
 .lang-box-container{
   display:flex;
   flex-direction:column;
   justify-content: center;
-  width: 90px;
-  height:110px;
+  width: 100px;
+  height:60px;
 }
 .lang-btn{
   background-color: black;
@@ -19,4 +19,5 @@
   border: none;
   padding: 10px;
   cursor: pointer;
+  width:100%;
 }
