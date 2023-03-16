@@ -1,9 +1,22 @@
 .lang-select-container{
   margin-top:25%;
-}
-.lang-box-container{
   background-color: aqua;
+  width:90%;
 }
 .lang-grid{
   background-color: red;
+}
+.lang-box-container{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  width: 90px;
+  height:110px;
+}
+.lang-btn{
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }

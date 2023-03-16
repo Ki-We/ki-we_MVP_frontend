@@ -29,13 +29,11 @@ const InterestingLangPage=()=>{
 
   const langItem=({lang_display,onClick})=>{
     return(
-      <>
         <div className="lang-box-container">
           <button className='lang-btn' onClick={onClick}>
-            <span>{lang_display}</span>
+            {lang_display}
           </button>
         </div>
-      </>
     );
   };
 
@@ -57,10 +55,10 @@ const InterestingLangPage=()=>{
             <h2>1개 이상 선택해 주세요.</h2>
           </div>
           <div className="lang-grid">
-            <Grid container spacing={3.3}>
+            <Grid container spacing={3}>
               {interestingLang.map((lang)=>(
                 <Grid item xs={4} key={lang.lang_name}>
-                <langItem 
+                <langItem
                 lang_display={lang.lang_display}
                 onClick={()=>handleBtnClick(lang)}/>
               </Grid>
