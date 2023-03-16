@@ -1,0 +1,23 @@
+[33mcommit e0a31d78bba2fb009ccc03513ccd6dc1acf0def7[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: joseunghyo <seunghyo7742@naver.com>
+Date:   Mon Mar 6 12:00:37 2023 +0900
+
+    [Add] add LanguageSwitchPage
+
+[33mcommit 8e646a3153d74d099d1c3bd25fe58f6e47742ba4[m
+Author: joseunghyo <seunghyo7742@naver.com>
+Date:   Mon Mar 6 10:04:54 2023 +0900
+
+    [Add] add LoadingPage #1
+
+[33mcommit 3707598b0a3f7542ea49e3012fd380a85a1c992f[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: joseunghyo <seunghyo7742@naver.com>
+Date:   Mon Feb 27 22:31:48 2023 +0900
+
+    Setting
+
+[33mcommit f2a42a9eee21b591005e6b4698b80a8657f3d647[m
+Author: Jo Seung Hyo <71173076+Joseunghyo7742@users.noreply.github.com>
+Date:   Mon Feb 27 19:33:14 2023 +0900
+
+    Initial commit

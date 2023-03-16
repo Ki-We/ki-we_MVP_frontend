@@ -32,14 +32,14 @@ const SelectTopic=()=>{
   useEffect(() => {
     console.log(selectedTopic);
     setIsFormComplete(selectedTopic.length>0); //관심주제 하나이상 들어오면 activate
-  }, [selectedTopic,setIsFormComplete]);
+  }, [selectedTopic,isFormComplete]);
   
   const TopicItem=({imgUrl,topicName,onClick,isSelected})=>{
     return(
       <>
         <div className="topic-box-container">
-          <button className={`topic-btn ${isSelected?.name===topicName? 'selected':''}`} onClick={onClick} >
-          <img className= {`topic-img ${isSelected?.name===topicName? 'selected-img':''}`} src={imgUrl} alt="topic-img-btn"  /> 
+          <button className='topic-btn' onClick={onClick} >
+          <img src={imgUrl} alt="topic-img-btn"  /> 
           </button>
           <div className="topicName">{topicName}</div>
         </div>
@@ -81,7 +81,7 @@ const SelectTopic=()=>{
           </div>
         </div>
       <Footer
-        buttonText="다음"
+        buttonText="선택완료"
         isFormComplete={isFormComplete}
       />
     </>

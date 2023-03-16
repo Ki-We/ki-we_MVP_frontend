@@ -9,7 +9,7 @@ const ProgressIndicator=(props)=>{
     navigate(-1);
   };
   return(
-  <header style={{position:"fixed", zIndex:"999", top:0, left:0, right:0 , backgroundColor:"white", paddingTop:"15%"}}>
+  <header style={{position:"fixed", zIndex:"999", top:0, left:0, right:0 , backgroundColor:"white", paddingTop:"12%"}}>
     <div style={{
       display:"flex",
       alignItems: "center",
