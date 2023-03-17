@@ -34,12 +34,13 @@ const SelectTopic=()=>{
     setIsFormComplete(selectedTopic.length>0); //관심주제 하나이상 들어오면 activate
   }, [selectedTopic,isFormComplete]);
   
-  const TopicItem=({imgUrl,topicName,onClick,isSelected})=>{
+  const TopicItem=({imgUrl,topicName,onClick})=>{
+    const isSelected= selectedTopic.some((interest)=>interest.name=== topicName);
     return(
       <>
         <div className="topic-box-container">
           <button className='topic-btn' onClick={onClick} >
-          <img src={imgUrl} alt="topic-img-btn"  /> 
+          <img className={`topic-img ${isSelected? "selected":''}`}src={imgUrl} alt="topic-img-btn"  /> 
           </button>
           <div className="topicName">{topicName}</div>
         </div>

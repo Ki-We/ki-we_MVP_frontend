@@ -29,13 +29,17 @@
   cursor: pointer;
 }
 
-.topic-btn img{
+.topic-img{
   flex-shrink:2;
   width:100%;
   height:143%;
   border-radius:50%;
 }
-
+.topic-img.selected{
+  border: 4px solid #3dbe14;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
 .topicName{
   flex-shrink:1;
   text-align:center;
