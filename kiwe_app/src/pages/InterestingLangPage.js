@@ -21,27 +21,31 @@ const interestLang=[
 const InterestingLangPage=()=>{
   const[interestingLang, setInterestingLang]=useState([]);
   const[isFormComplete, setIsFormComplete]=useState(false);
-
   useEffect(()=>{
-    console.log(interestLang);
+    console.log(interestingLang);
     setIsFormComplete(interestingLang.length>0);
-  },[interestingLang, isFormComplete]);
+  },[interestingLang]);
 
   const LangItem=({lang_display,onClick})=>{
+    const isSelected = interestingLang.some((lang) => lang.lang_display === lang_display);
+    const handleClick = () => {
+      onClick(lang_display);
+    };
     if(lang_display==='others'){
       return(
         <div className="lang-box-container">
           <input 
             className="lang-input"
             type="text"
-            placeholder="언어 직접입력"
+            placeholder="others________________"
+            
             />
         </div>
       );
     }
     return(
         <div className="lang-box-container">
-          <button className='lang-btn' onClick={()=>onClick(lang_display)}>
+          <button className={`lang-btn ${isSelected? "selected":''}`} onClick={handleClick}>
             {lang_display}
           </button>
         </div>
@@ -49,9 +53,9 @@ const InterestingLangPage=()=>{
   };
 
   const handleBtnClick=(lang)=>{
-    const isAlreadySelected = interestingLang.find(item=>item.langName===lang.langName);
+    const isAlreadySelected = interestingLang.some(item=>item.lang_name===lang.lang_name);
     if(isAlreadySelected){
-      setInterestingLang(prevInterestingLang =>prevInterestingLang.filter(item=>item.langName !==lang.langName));
+      setInterestingLang(prevInterestingLang =>prevInterestingLang.filter(item=>item.lang_name !==lang.lang_name));
     }else{
       setInterestingLang(prevInterestingLang=>[...prevInterestingLang,lang]);
     }

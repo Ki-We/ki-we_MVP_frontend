@@ -30,6 +30,11 @@
   width:100%;
   height:100%;
 }
+.lang-btn.selected{
+  background-color:#3dbe14;
+  color: white;
+  
+}
 .lang-input{
   background-color: white;
   border: solid 2px #3dbe14;
