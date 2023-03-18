@@ -3,6 +3,7 @@ import Footer from '../Footer';
 import ProgressIndicator from "../components/ProgressIndicator";
 import React, { useEffect,useState} from 'react';
 import Grid from '@mui/material/Grid';
+/* eslint-disable react/prop-types */
 
 const interestLang=[
   {lang_display:'한국어', lang_name:'Korean'},
@@ -87,3 +88,4 @@ const InterestingLangPage=()=>{
 }
 
 export default InterestingLangPage;
+

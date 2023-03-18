@@ -1,7 +1,8 @@
 import BottomNavigation from '../BottomNavigation';
+import React from 'react'
 
-const MainPage=()=>{
-  return(
+export default function MainPage() {
+  return (
     <>
       <div className="main-page-container">
 
@@ -10,4 +11,3 @@ const MainPage=()=>{
     </>
   )
 }
-export default MainPage;

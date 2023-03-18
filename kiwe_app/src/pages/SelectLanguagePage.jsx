@@ -2,12 +2,12 @@ import React, {useState,useEffect}  from 'react';
 import '../styles/langPage.css';
 import Footer from '../Footer';
 
-const SelectLanguagePage=()=>{
+
+export default function SelectLanguagePage() {
   const [termCheck,setTermCheck]= useState(false);
   const [privacyCheck,setPrivacyCheck]= useState(false);
   const [selectedLanguage, setSelectedLanguages]= useState(null);
   const [isFormComplete, setIsFormComplete]= useState(false);
-  const [isSubmitted, setIsSubmitted]=useState(false);
   //언어선택 버튼
   const handleButtonClick=(language)=>{
     setSelectedLanguages(language);
@@ -15,7 +15,6 @@ const SelectLanguagePage=()=>{
 
   const handleFooterButtonClick=()=>{
     if(isFormComplete){
-      setIsSubmitted(true);
       console.log("able");
         //navigate to the next page
     } else{
@@ -80,4 +79,3 @@ const SelectLanguagePage=()=>{
     </>
   )
 }
-export default SelectLanguagePage;

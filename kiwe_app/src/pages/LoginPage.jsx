@@ -1,5 +1,7 @@
-const LoginPage=()=>{
-  return(
+import React from 'react'
+
+export default function LoginPage() {
+  return (
     <>
       <div className="text-top">
         <h2 className="logo">KiWES</h2>
@@ -10,4 +12,3 @@ const LoginPage=()=>{
     </>
   )
 }
-export default LoginPage;
