@@ -6,6 +6,7 @@ import ProfileSettingPage from './pages/ProfileSettingPage';
 import LoginPage from './pages/LoginPage';
 import SelectTopic from './pages/SelectTopic';
 import InterestingLangPage from './pages/InterestingLangPage';
+import MainPage from './pages/MainPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Container from '@mui/material/Container';
 
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/start/profilesetting" element={<ProfileSettingPage/>}/>
                 <Route path="/start/selecttopic" element={<SelectTopic/>}/>
                 <Route path="/start/select-interesting-lang" element={<InterestingLangPage/>}/>
+                <Route path="/mainpage" element={<MainPage/>}/>
               </Routes>
             </div>
       </Container>
