@@ -1,5 +1,4 @@
 /* eslint-disable react/react-in-jsx-scope */
-import './App.css';
 import SelectLanguagePage from './pages/SelectLanguagePage';
 // import LoadingPage from './pages/LoadingPage';
 //import MainPage from './pages/MainPage';
@@ -11,7 +10,6 @@ import MainPage from './pages/MainPage';
 import { Routes, Route } from 'react-router-dom';
 // import Container from '@mui/material/Container';
 import Layout from './components/layout/Layout';
-
 function App() {
   return (
     <Layout>
