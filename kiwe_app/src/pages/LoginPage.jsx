@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function LoginPage() {
   return (
@@ -10,5 +10,5 @@ export default function LoginPage() {
       <img id="logo-img" src="" />
       <button>카카오로그인하기들어가야함</button>
     </>
-  )
+  );
 }
