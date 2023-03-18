@@ -10,11 +10,9 @@ import MainPage from './pages/MainPage';
 import { Routes, Route } from 'react-router-dom';
 // import Container from '@mui/material/Container';
 import Layout from './components/layout/Layout';
-import Card from './components/UI/Card';
 function App() {
   return (
     <Layout>
-      <Card/>
       <Routes>
         <Route path="/start/selectlanguage" element={<SelectLanguagePage />} />
         <Route path="/start/login" element={<LoginPage />} />
