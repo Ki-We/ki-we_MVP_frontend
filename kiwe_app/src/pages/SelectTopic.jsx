@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import '../styles/selectTopicPage.css';
 import Grid from '@mui/material/Grid';
 import ProgressIndicator from "../components/ProgressIndicator";
@@ -25,7 +26,8 @@ const interests=[
   {name: '술', imgUrl: '/assets/movie.jpg'},
 ];
 
-const SelectTopic=()=>{
+
+export default function SelectTopic() {
   const[selectedTopic,setSelectedTopic]=useState([]); //선택된 관심주제
   const[isFormComplete, setIsFormComplete]= useState(false);
   
@@ -88,4 +90,3 @@ const SelectTopic=()=>{
     </>
   );
 }
-export default SelectTopic;

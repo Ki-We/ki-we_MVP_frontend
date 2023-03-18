@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState,useEffect} from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -15,12 +16,11 @@ const SmallAvatar = styled(Avatar)(({ theme }) => ({
   opacity:0.7,
 }));
 
-
-const ProfileSettingPage=()=>{
+export default function ProfileSettingPage() {
   const [profileImg, setProfileImg]= useState('/assets/profile_default.png');//default이미지경로 추후
   const[name, setName]=useState('');
   const [gender, setGender]= useState("");
-  const[checkName,setCheckName]=useState(false);
+  const[checkName,setCheckName]=useState(false); //닉네임 중복체크 기능 구현 필요
   const [birthdate, setBirthdate]=useState(null);
   const [email, setEmail] =useState('');
   const[bio, setBio]= useState('');
@@ -118,4 +118,3 @@ const ProfileSettingPage=()=>{
     </>
   )
 }
-export default ProfileSettingPage;
