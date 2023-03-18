@@ -1,9 +1,8 @@
-#page-body{
-  display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-  height:100vh;
-  width:100%;
-  justify-content:center;
-  
+#page-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
 }
