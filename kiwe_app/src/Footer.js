@@ -1,4 +1,4 @@
-//test
+//test.
 const Footer=({buttonText, isFormComplete })=>{
   const buttonStyle={
     width:'100%',
