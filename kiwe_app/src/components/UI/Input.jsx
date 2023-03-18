@@ -12,7 +12,7 @@ export default function Input(props) {
       />
       {props.number && (
         <>
-          <button className="absolute right-6">
+          <button className="absolute  right-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -44,9 +44,10 @@ export default function Input(props) {
 
 Input.defaultProps = {
   type: 'text',
-  height: 2,
+  height: 3,
 };
 
 Input.propsTypes = {
   children: PropTypes.node.isRequired,
+  height: PropTypes.node.isRequired,
 };
