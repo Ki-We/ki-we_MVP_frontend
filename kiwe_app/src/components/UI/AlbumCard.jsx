@@ -16,9 +16,9 @@ export default function AlbumCard() {
   
   return (
     <>
-      <div className="albumCardContainer">
-        <LikeButton top={"4%"} right={"4%"}/>
-        <img className="albumBackgroundImg" src="./assets/album.jpg"/>
+      <div className="albumCardContainer" >
+        <LikeButton top={"4%"} right={"4%"} width={"7%"} height={"7.3%"}/>
+      <img className="albumBackgroundImg" src="./assets/album.jpg"/>
         <div className="albumTop">
           <img className="writerProfileImg" src="./assets/movie.jpg" />          
           <span className="albumTitle">저랑 K팝 얘기 할 친구 찾아요⭐</span>
@@ -34,7 +34,6 @@ export default function AlbumCard() {
               <img src="./assets/countParticipant.png" style={participantImg}/><span style={{color:"white"}}>2/5</span></TagBlock>
           </div>
         </div>
-        
       </div>
     </>
   )

@@ -2,6 +2,7 @@
   width: 21rem;
   height: auto;
   min-height: 6.4rem;
+  position:relative;
 }
 .cardContainer{
   display:flex;
@@ -67,14 +68,4 @@
   font-size:0.7rem;
   font-weight: 500;
 }
-.likeIcon{
-  width: 4%;
-  height:5%;
-  align-self:flex-end;
-  padding-right:3%;
-}
 
-
-.likeIcon:hover{
-
-}

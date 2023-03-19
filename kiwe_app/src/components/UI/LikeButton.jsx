@@ -1,29 +1,26 @@
 import React,{useState} from 'react'
 
 export default function LikeButton(props) {
-  const [likeBtnImg, setLikeBtnImg]=useState('./assets/LikeButton_white.png');
-  const [likeButtonFilter, setLikeButtonFilter] = useState("brightness(100)");
+  const [likeBtnImg, setLikeBtnImg]=useState('./assets/likebutton.png');
 
   const likeBtnStyle={
-    width: '7%',
-    height: '7.3%', 
+    width: props.width,
+    height: props.height, 
     display: 'inline', 
-    position: 'absolute', 
     top: props.top,
     right: props.right,
+    position:'absolute',
+    zIndex:'4',
   }
   const likeBtnImgStyle={
     width:'100%',
     height:'100%',
-    filter:likeButtonFilter,
   }
   const likeButtonClick=()=>{
-    if(likeBtnImg==='./assets/LikeButton_white.png'){
-      setLikeBtnImg('./assets/LikeButton_hover.png');
-      setLikeButtonFilter("none");
+    if(likeBtnImg==='./assets/likebutton.png'){
+      setLikeBtnImg('./assets/likebutton_green.png');
     }else{
-      setLikeBtnImg('./assets/LikeButton_white.png');
-      setLikeButtonFilter("brightness(100)");
+      setLikeBtnImg('./assets/likebutton.png');
     }
   }
   return (

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Card.css';
+import LikeButton from './LikeButton';
 
 export default function Card({CardImgURL, CardTitle, InfoDate, InfoLocation, InfoLang}) {
   return (
@@ -30,9 +31,9 @@ export default function Card({CardImgURL, CardTitle, InfoDate, InfoLocation, Inf
               </li>
             </ul>
           </div>
-          <img className="likeIcon" src="./assets/likebutton.png" />
         </div>
-        
+        <LikeButton width={"5%"} height={"13%"} top={"7%"} right={"5%"}/>
+
       </div>
     </div>
   )
