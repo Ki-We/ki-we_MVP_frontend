@@ -3,8 +3,8 @@ import React from 'react';
 
 export default function Main(props) {
   return (
-    <main id="page-body">
-      <div>{props.children}</div>
+    <main className="w-full h-full">
+      <section>{props.children}</section>
     </main>
   );
 }
