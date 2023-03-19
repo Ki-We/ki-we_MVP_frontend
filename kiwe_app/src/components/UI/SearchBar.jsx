@@ -20,6 +20,7 @@ export default function SearchBar(props) {
   };
   
   const searchInputStyle = {
+    flex: 1,
     border: 'none',
     borderBottom: '1.5px solid #868686',
     outline: 'none',
