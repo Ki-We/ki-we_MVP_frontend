@@ -1,70 +1,57 @@
-import * as React from 'react';
-import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
-import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
-import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
-import Paper from '@mui/material/Paper';
-import { styled } from '@mui/material/styles';
-const MyBottomNavigationAction = styled(BottomNavigationAction)(({ theme }) => ({
-  '& .MuiBottomNavigationAction-iconOnly': {
-    fontSize: theme.spacing(4),
-    marginTop: theme.spacing(0.5),
-    color: '#000', // set default color
-  },
-  '&.Mui-selected': {
-    color: '#3dbe14',
-    '& .MuiBottomNavigationAction-iconOnly': {
-      color: '#3dbe14',
-    },
-  },
-  '& .MuiBottomNavigationAction-label': {
-    fontSize: theme.spacing(1.6),
-    fontWeight: '600',
-    marginTop: theme.spacing(0.7),
-    color: '#000', // set default color
-  },
-  '&.Mui-selected .MuiBottomNavigationAction-label': {
-    color: '#3dbe14',
-  },
-}));
-const MyAddCircleOutlineOutlinedIcon = styled(AddCircleOutlineOutlinedIcon)({
-  fontSize: '2.5rem',
-});
-const StyledBottomNavigation = styled(BottomNavigation)(({ theme }) => ({
-  height: '80px',
-  display: 'flex',
-  justifyContent: 'center',
-  '& .MuiBottomNavigationAction-root': {
-    width: 'auto',
-    minWidth: '80px',
-    maxWidth: '120px',
-    flexGrow: 1,
-    margin: theme.spacing(0, 0.5), // add margin
-  },
-}));
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import {
+  HomeOutlined,
+  FavoriteBorderOutlined,
+  AddCircleOutlineOutlined,
+  ChatBubbleOutlineOutlined,
+  AccountCircleOutlined,
+} from '@mui/icons-material';
 
 export default function Nav() {
-  const [value, setValue] = React.useState(0);
+  const location = useLocation();
+  const [value, setValue] = useState(location.pathname);
+
+  useEffect(() => {
+    setValue(location.pathname);
+  }, [location]);
+
+  const activeClass = 'text-green-500';
 
   return (
-    <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
-      <StyledBottomNavigation
-        sx={{ height: '80px' }}
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-      >
-        <MyBottomNavigationAction label="HOME" icon={<HomeOutlinedIcon />} />
-        <MyBottomNavigationAction label="WISH" icon={<FavoriteBorderOutlinedIcon />} />
-        <MyBottomNavigationAction icon={<MyAddCircleOutlineOutlinedIcon />} />
-        <MyBottomNavigationAction label="CHAT" icon={<ChatBubbleOutlineOutlinedIcon />} />
-        <MyBottomNavigationAction label="MY" icon={<AccountCircleOutlinedIcon />} />
-      </StyledBottomNavigation>
-    </Paper>
+    <nav className="fixed bottom-0 left-0 right-0 bg-white shadow-lg">
+      <ul className="flex justify-around max-w-screen-lg mx-auto py-2">
+        <li className="flex flex-col items-center justify-center w-20">
+          <Link to="/mainpage" className={`pb-1 ${value === '/mainpage' ? activeClass : ''}`}>
+            <HomeOutlined />
+          </Link>
+          <span className={`text-xs font-medium ${value === '/mainpage' ? activeClass : ''}`}>HOME</span>
+        </li>
+        <li className="flex flex-col items-center justify-center w-20">
+          <Link to="/wish" className={`pb-1 ${value === '/wish' ? activeClass : ''}`}>
+            <FavoriteBorderOutlined />
+          </Link>
+          <span className={`text-xs font-medium ${value === '/wish' ? activeClass : ''}`}>WISH</span>
+        </li>
+        <li className="flex flex-col items-center justify-center w-20">
+          <Link to="/start/createpost" className={`pb-1 ${value === '/start/createpost' ? activeClass : ''}`}>
+            <AddCircleOutlineOutlined style={{ fontSize: '2.5rem' }} />
+          </Link>
+          <span className={`text-xs font-medium ${value === '/start/createpost' ? activeClass : ''}`}>ADD</span>
+        </li>
+        <li className="flex flex-col items-center justify-center w-20">
+          <Link to="/chat" className={`pb-1 ${value === '/chat' ? activeClass : ''}`}>
+            <ChatBubbleOutlineOutlined />
+          </Link>
+          <span className={`text-xs font-medium ${value === '/chat' ? activeClass : ''}`}>CHAT</span>
+        </li>
+        <li className="flex flex-col items-center justify-center w-20">
+          <Link to="/start/profile" className={`pb-1 ${value === '/start/profile' ? activeClass : ''}`}>
+            <AccountCircleOutlined />
+          </Link>
+          <span className={`text-xs font-medium ${value === '/start/profile' ? activeClass : ''}`}>MY</span>
+        </li>
+      </ul>
+    </nav>
   );
 }
