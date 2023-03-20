@@ -10,18 +10,16 @@ import MainPage from './pages/MainPage';
 import { Routes, Route } from 'react-router-dom';
 // import Container from '@mui/material/Container';
 import Layout from './components/layout/Layout';
-import SearchBar from './components/UI/SearchBar';
 function App() {
   return (
     <Layout>
-      <SearchBar/>
       <Routes>
         <Route path="/start/selectlanguage" element={<SelectLanguagePage />} />
         <Route path="/start/login" element={<LoginPage />} />
         <Route path="/start/profilesetting" element={<ProfileSettingPage />} />
         <Route path="/start/selecttopic" element={<SelectTopic />} />
         <Route path="/start/select-interesting-lang" element={<InterestingLangPage />} />
-        <Route path="/mainpage" element={<MainPage />} />
+        <Route path="/" element={<MainPage/>} />
       </Routes>
     </Layout>
   );

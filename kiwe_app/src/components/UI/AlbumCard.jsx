@@ -4,8 +4,11 @@ import LikeButton from './LikeButton';
 import './AlbumCard.css';
 
 
-export default function AlbumCard() {
-  
+export default function AlbumCard(props) {
+  const containerSize={
+    width:props.width,
+    height:props.height,
+  }
   const participantImg={
     width:"1.2rem",
     height:"1.2rem",
@@ -16,7 +19,7 @@ export default function AlbumCard() {
   
   return (
     <>
-      <div className="albumCardContainer" >
+      <div className="albumCardContainer" style={containerSize} >
         <LikeButton top={"4%"} right={"4%"} width={"7%"} height={"7.3%"}/>
       <img className="albumBackgroundImg" src="./assets/album.jpg"/>
         <div className="albumTop">
