@@ -2,7 +2,7 @@ import React from 'react'
 import './Card.css';
 import LikeButton from './LikeButton';
 
-export default function Card({CardImgURL, CardTitle, InfoDate, InfoLocation, InfoLang}) {
+export default function Card(props) {
   return (
     <div>
       <div className="cardWrapper">
@@ -32,7 +32,7 @@ export default function Card({CardImgURL, CardTitle, InfoDate, InfoLocation, Inf
             </ul>
           </div>
         </div>
-        <LikeButton width={"5%"} height={"13%"} top={"80%"} right={"4%"}/>
+        <LikeButton width={props.likeWidth} height={props.likeHeight} top={props.likeTop} right={props.likeRight}/>
 
       </div>
     </div>

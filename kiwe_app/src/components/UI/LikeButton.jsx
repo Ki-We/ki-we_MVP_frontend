@@ -8,6 +8,7 @@ export default function LikeButton(props) {
     height: props.height, 
     display: 'inline', 
     top: props.top,
+    bottom:props.bottom,
     right: props.right,
     position:'absolute',
     zIndex:'4',
