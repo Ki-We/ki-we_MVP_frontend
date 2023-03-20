@@ -7,6 +7,11 @@ import './MainPage.css';
 
 export default function MainPage() {
   const [cardIndex, setCardIndex] = useState(0);
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSearch= searchTerm=>{
+    setSearchResults([...searchResults, searchTerm]); //user가 검색한 검색어들
+  }
   const handlePrevClick = () => {
     if (cardIndex > 0) {
       setCardIndex(cardIndex - 1);
@@ -22,7 +27,7 @@ export default function MainPage() {
   return (
     <div className="mainContainer">
       <div className="searchBar">
-        <SearchBar/>
+        <SearchBar onSearch={handleSearch}/>
       </div>
       <div className="popularPost">
         <span className="mainTitle">인기 모임</span>
