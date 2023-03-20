@@ -16,7 +16,7 @@ export default function SearchBar(props) {
     justifyContent:'center',
     alignItems: 'center',
     margin: '0 auto',
-    maxWidth: '300px',
+    maxWidth: '390px',
   };
   
   const searchInputStyle = {
