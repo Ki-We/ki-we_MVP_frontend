@@ -32,7 +32,7 @@ export default function Card({CardImgURL, CardTitle, InfoDate, InfoLocation, Inf
             </ul>
           </div>
         </div>
-        <LikeButton width={"5%"} height={"13%"} top={"7%"} right={"5%"}/>
+        <LikeButton width={"5%"} height={"13%"} top={"80%"} right={"4%"}/>
 
       </div>
     </div>

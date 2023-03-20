@@ -1,27 +1,28 @@
 .cardWrapper {
   width: 91.5%;
-  height:auto;
+  height: 37%;
   position:relative;
 }
 .cardContainer{
   display:flex;
   align-items:center;
   background-color: #ffffd8;
-  padding:9px;
+  padding:5px;
+  padding-left:8px;
   padding-right:0px;
   border-radius:20px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   border: solid 1px rgba(138, 138, 138, 0.1);
 }
 .cardImg{
-  width:8rem;
-  height: 6.2rem;
+  width:43%;
+  height:5rem;
   border-radius: 17px;
 }
 .infoSection{
   margin-left:1rem;
-  width:11rem;
-  height:6rem;
+  width:55%;
+  
 }
 .cardDetailInfo{
   display:flex;
@@ -34,7 +35,7 @@
 .cardDetailInfo li{
   display:flex;
   align-content:center; 
-  padding-bottom:5%;
+  padding-bottom:4%;
 }
 .infoImgContainer{
   display:flex;
