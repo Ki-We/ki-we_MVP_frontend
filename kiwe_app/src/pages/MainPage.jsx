@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SearchBar from '../components/UI/SearchBar';
 import AlbumCard from '../components/UI/AlbumCard';
 import TagBlock from '../components/UI/TagBlock';
@@ -6,6 +6,19 @@ import Card from '../components/UI/Card';
 import './MainPage.css';
 
 export default function MainPage() {
+  const [cardIndex, setCardIndex] = useState(0);
+  const handlePrevClick = () => {
+    if (cardIndex > 0) {
+      setCardIndex(cardIndex - 1);
+    }
+  };
+    const handleNextClick = () => {
+      // assuming there are 5 cards total
+      if (cardIndex < 5) {
+        setCardIndex(cardIndex + 1);
+      }
+    };
+  
   return (
     <div className="mainContainer">
       <div className="searchBar">
@@ -13,7 +26,7 @@ export default function MainPage() {
       </div>
       <div className="popularPost">
         <span className="mainTitle">인기 모임</span>
-        <AlbumCard />
+        <AlbumCard width={"100%"} heigh={"100%"}/>
       </div>
       <div className="postCategory">
         <span className="mainTitle">카데고리별 모임</span>
@@ -40,7 +53,11 @@ export default function MainPage() {
       </div>
       <div className="recoPost">
         <span className="mainTitle">추천 모임</span>
-        <Card/>
+        <div className="recoSection">
+          <button className="recoPostBtn" onClick={handlePrevClick}><img src="./assets/previous.png"/></button>
+          <Card className="cardPosition" likeWidth={"4%"} likeTop={"210%"} likeRight={"4%"} />
+          <button className="recoPostBtn" onClick={handleNextClick}><img src="./assets/next.png"/></button>
+        </div>
       </div>
     </div>
   );
