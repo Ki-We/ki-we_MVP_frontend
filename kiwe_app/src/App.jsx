@@ -19,7 +19,7 @@ function App() {
         <Route path="/start/profilesetting" element={<ProfileSettingPage />} />
         <Route path="/start/selecttopic" element={<SelectTopic />} />
         <Route path="/start/select-interesting-lang" element={<InterestingLangPage />} />
-        <Route path="/mainpage" element={<MainPage />} />
+        <Route path="/" element={<MainPage/>} />
       </Routes>
     </Layout>
   );

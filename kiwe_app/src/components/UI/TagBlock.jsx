@@ -10,7 +10,7 @@ export default function TagBlock(props) {
     justifyContent: "center",
     padding: "0.2rem",
     borderRadius: "30px",
-    boxShadow: props.boxShadow== 1 ? "0 3px 3px 0" : "none", 
+    boxShadow: props.boxShadow== 1 ? "0 3px 3px 0 rgba(0,0,0,0.3)" : "none", 
     border: props.borderColor==0? "none": 'solid 1px #3dbe14', 
     fontSize: "0.75rem",
     fontWeight: "600",
